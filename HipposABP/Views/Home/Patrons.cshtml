@@ -1,0 +1,200 @@
+﻿
+@{
+    ViewBag.Title = "Patrons";
+    Layout = "~/Views/Shared/_LayoutPostLogin.cshtml";
+}
+
+<div id="main-content">
+    <div class="container-fluid">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 col-sm-12">
+                    <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Patrons</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="~/home/index"><i class="icon-home"></i></a></li>
+                        <li class="breadcrumb-item active">Patrons</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="body">
+            <p class="float-md-right">
+                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addPatrons">Add Patrons</button>
+            </p>
+            <div class="table-responsive">
+                <table class="table table-hover m-b-0 c_list">
+                    <thead>
+                        <tr>
+
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td>
+
+                                <p class="c_name">John Smith </p>
+                            </td>
+                            <td>
+                                <span class="phone"><i class="zmdi zmdi-phone m-r-10"></i>264-625-2583</span>
+                            </td>
+                            <td>
+                                <address><i class="zmdi zmdi-pin"></i>123 6th St. Melbourne, FL 32904</address>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-success" title="view" data-toggle="modal" data-target="#viewDetails"><i class="fa fa-eye"></i></button>
+                                <button type="button" class="btn btn-info" title="Edit" data-toggle="modal" data-target="#editDetails"><i class="fa fa-edit"></i></button>
+                                <button type="button" data-type="confirm" class="btn btn-danger js-sweetalert" title="Delete"><i class="fa fa-trash-o"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+
+                                <p class="c_name">Hossein Shams </p>
+                            </td>
+                            <td>
+                                <span class="phone"><i class="zmdi zmdi-phone m-r-10"></i>264-625-5689</span>
+                            </td>
+                            <td>
+                                <address><i class="zmdi zmdi-pin"></i>44 Shirley Ave. West Chicago, IL 60185</address>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-success" title="view" data-toggle="modal" data-target="#viewDetails"><i class="fa fa-eye"></i></button>
+                                <button type="button" class="btn btn-info" title="Edit" data-toggle="modal" data-target="#editDetails"><i class="fa fa-edit"></i></button>
+                                <button type="button" data-type="confirm" class="btn btn-danger js-sweetalert" title="Delete"><i class="fa fa-trash-o"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+
+                                <p class="c_name">Frank Camly</p>
+                            </td>
+                            <td>
+                                <span class="phone"><i class="zmdi zmdi-phone m-r-10"></i>264-625-9999</span>
+                            </td>
+                            <td>
+                                <address><i class="zmdi zmdi-pin"></i>123 6th St. Melbourne, FL 32904</address>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-success" title="view" data-toggle="modal" data-target="#viewDetails"><i class="fa fa-eye"></i></button>
+                                <button type="button" class="btn btn-info" title="Edit" data-toggle="modal" data-target="#editDetails"><i class="fa fa-edit"></i></button>
+                                <button type="button" data-type="confirm" class="btn btn-danger js-sweetalert" title="Delete"><i class="fa fa-trash-o"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <p class="c_name">Tim Hank</p>
+                            </td>
+                            <td>
+                                <span class="phone"><i class="zmdi zmdi-phone m-r-10"></i>264-625-1212</span>
+                            </td>
+                            <td>
+                                <address><i class="zmdi zmdi-pin"></i>70 Bowman St. South Windsor, CT 06074</address>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-success" title="view" data-toggle="modal" data-target="#viewDetails"><i class="fa fa-eye"></i></button>
+                                <button type="button" class="btn btn-info" title="Edit" data-toggle="modal" data-target="#editDetails"><i class="fa fa-edit"></i></button>
+                                <button type="button" data-type="confirm" class="btn btn-danger js-sweetalert" title="Delete"><i class="fa fa-trash-o"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Add appointments modal -->
+<div class="modal fade" id="addPatrons" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="title" id="defaultModalLabel">Add New Patrons</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row clearfix">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter Your Email">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Phone">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-simple" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--View Details-->
+<div class="modal fade" id="viewDetails" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="title" id="defaultModalLabel">View Details</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>details</p>
+            </div>
+            <div class="modal-footer">
+                <h6>ok</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--edit Details-->
+<div class="modal fade" id="editDetails" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="title" id="defaultModalLabel">Edit Details</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>details</p>
+            </div>
+            <div class="modal-footer">
+                <h6>ok</h6>
+            </div>
+        </div>
+    </div>
+</div>
+

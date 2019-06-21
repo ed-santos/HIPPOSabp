@@ -1,44 +1,58 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+﻿<!doctype html>
+<html lang="en">
 
+<head>
+    <title>HIPPOS ABP</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="HIPPOS Software Booking Platform">
+    <meta name="author" content="HIPPOS Software Inc.">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="~/content/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/content/vendor/font-awesome/css/font-awesome.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="~/content/css/main.css">
+    <link rel="stylesheet" href="~/content/css/color_skins.css">
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+
+<body class="theme-cyan">
+    <!-- WRAPPER -->
+    <div id="wrapper">
+        <div class="vertical-align-wrap">
+            <div class="vertical-align-middle auth-main">
+                <div class="auth-box">
+                    <div class="top">
+                        <h2> HIPPOS Booking Platform </h2>
+                    </div>
+                    <section>
+                        <div class="card">
+                            <div class="header">
+                                
+                                @RenderBody()
+                                
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    <!-- END WRAPPER -->
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+
+
     @RenderSection("scripts", required: false)
 </body>
+
 </html>
+
+
+
+
+    
+
+

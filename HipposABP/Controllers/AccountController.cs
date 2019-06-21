@@ -12,7 +12,7 @@ using HipposABP.Models;
 
 namespace HipposABP.Controllers
 {
-    [Authorize]
+    
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -151,7 +151,7 @@ namespace HipposABP.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };//, FirstName = model.FirstName, LastName = model.LastName 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -385,14 +385,14 @@ namespace HipposABP.Controllers
             return View(model);
         }
 
-        //
+        [Authorize]
         // POST: /Account/LogOff
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Account");
         }
 
         //

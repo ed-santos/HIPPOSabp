@@ -1,0 +1,154 @@
+﻿
+@{
+    ViewBag.Title = "Status";
+    Layout = "~/Views/Shared/_LayoutPostLogin.cshtml";
+}
+
+<div id="main-content">
+    <div class="container-fluid">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 col-sm-12">
+                    <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Status</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="~/home/index"><i class="icon-home"></i></a></li>
+                        <li class="breadcrumb-item active">Status</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="body">
+            <p class="float-md-right">
+                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addStatus">Add Status</button>
+            </p>
+            <div class="table-responsive">
+                <table class="table table-hover m-b-0 c_list">
+                    <thead>
+                        <tr>
+
+                            <th>Status</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td>
+
+                                <p class="c_name">John Smith </p>
+                            </td>
+                            <td>
+                                <span class="phone"><i class="zmdi zmdi-phone m-r-10"></i>264-625-2583</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info" title="Edit" data-toggle="modal" data-target="#editDetails"><i class="fa fa-edit"></i></button>
+                                <button type="button" data-type="confirm" class="btn btn-danger js-sweetalert" title="Delete"><i class="fa fa-trash-o"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+
+                                <p class="c_name">Hossein Shams </p>
+                            </td>
+                            <td>
+                                <span class="phone"><i class="zmdi zmdi-phone m-r-10"></i>264-625-5689</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info" title="Edit" data-toggle="modal" data-target="#editDetails"><i class="fa fa-edit"></i></button>
+                                <button type="button" data-type="confirm" class="btn btn-danger js-sweetalert" title="Delete"><i class="fa fa-trash-o"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+
+                                <p class="c_name">Frank Camly</p>
+                            </td>
+                            <td>
+                                <span class="phone"><i class="zmdi zmdi-phone m-r-10"></i>264-625-9999</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info" title="Edit" data-toggle="modal" data-target="#editDetails"><i class="fa fa-edit"></i></button>
+                                <button type="button" data-type="confirm" class="btn btn-danger js-sweetalert" title="Delete"><i class="fa fa-trash-o"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <p class="c_name">Tim Hank</p>
+                            </td>
+                            <td>
+                                <span class="phone"><i class="zmdi zmdi-phone m-r-10"></i>264-625-1212</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-info" title="Edit" data-toggle="modal" data-target="#editDetails"><i class="fa fa-edit"></i></button>
+                                <button type="button" data-type="confirm" class="btn btn-danger js-sweetalert" title="Delete"><i class="fa fa-trash-o"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Add Services modal -->
+<div class="modal fade" id="addStatus" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="title" id="defaultModalLabel">Add New Status</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row clearfix">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name of Status">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <textarea rows="6" class="form-control no-resize" placeholder="Details about the status"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-simple" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--edit Details-->
+<div class="modal fade" id="editDetails" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="title" id="defaultModalLabel">Edit Details</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>details</p>
+            </div>
+            <div class="modal-footer">
+                <h6>ok</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
